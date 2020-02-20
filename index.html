@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Klipdrift makes a wayward mix of hardrock, heavy metal, new & old wave and a hint of punk makes listening to this band a rollercoaster of diversity and style. The tight and solid rifs, supported by subtle melodic licks makes it impossible for the public to not move to the beat! The sort of raw vocals supported by backing vocals makes the experience complete and unforgettable.">
+    <meta name="keywords" content="klipdrift,band,music,hardrock,metal,heavy,sound,wave,performance,live,album">
+
+    <title>Klipdrift - wayward mix of hardrock, heavy metal, new & old wave and a hint of punk</title>
+    <base href="/" />
+
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="css/loader.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/player.css" rel="stylesheet">
+    <link href="css/bootstrap-formhelpers.css" rel="stylesheet">
+    <link href="css/video-header.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet" />
+
+    <!-- Redirect older browsers to static page -->
+    <script>
+        const supported = (() => {
+            try {
+                if (typeof WebAssembly === "object"
+                    && typeof WebAssembly.instantiate === "function") {
+                    const module = new WebAssembly.Module(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
+                    if (module instanceof WebAssembly.Module) {
+                        return new WebAssembly.Instance(module) instanceof WebAssembly.Instance;
+                    }
+                }
+            } catch (e) {
+            }
+            return false;
+        })();
+
+        if (!supported) {
+            location.href = 'klipdrift.html';
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/youtube-embed.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.flexslider.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/cbpGridGallery.js"></script>
+    <script src="js/bootstrap-formhelpers.js"></script>
+    <script src="js/magnify.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body class="home home-demo-2 demo-2-bg">
+    <app>
+        <div class="loader">
+            <div class="group">
+                <div class="bigSqr">
+                    <div class="square first"></div>
+                    <div class="square second"></div>
+                    <div class="square third"></div>
+                    <div class="square fourth"></div>
+                </div>
+                <div class="text">loading</div>
+            </div>
+        </div>
+    </app>
+
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages/blob/gh-pages/index.html
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location));
+    </script>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>
