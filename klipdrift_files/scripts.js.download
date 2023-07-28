@@ -1,0 +1,87 @@
+﻿var windowElement;
+
+function loadScripts() {
+    var timerId = setTimeout(function tick() {
+        if (document.querySelectorAll('.loader').length < 1) {
+            windowElement = jQuery(window);
+            loadNavigationMenu();
+            closeMainNavigationOnNavigate();
+            loadHeaderVisuals();
+        }
+        else {
+            timerId = setTimeout(tick, 250);
+        }
+    }, 250);
+}
+
+// This will be triggered on the first load, when loading the index.html
+// Navigation events will be handled in the MainLayout and re-trigger this function
+loadScripts();
+
+
+function loadNavigationMenu() {
+    $('.menu_icon').on('click', function () {
+        $(this).toggleClass('active');
+        $('#header .nav-menu').toggleClass('active');
+    });
+}
+
+function closeMainNavigationOnNavigate() {
+    $('.nav-menu a, .mobile-logo a').on('click', function () {
+        //$('#navigation').collapse('hide');
+        $('.menu_icon').toggleClass('active');
+        $('#header .nav-menu').toggleClass('active');
+    });
+}
+
+function loadHeaderVisuals() {
+    // Header background
+    if (windowElement.scrollTop() > 20) {
+        $('.header-container').addClass('active');
+    } else {
+        $('.header-container').removeClass('active');
+    }
+
+    // Header background: Page scroll
+    windowElement.on('scroll', function () {
+        if ($(this).scrollTop() > 20) {
+            $('.header-container').addClass('active');
+        } else {
+            $('.header-container').removeClass('active');
+        }
+    });
+
+    // Set header to full height
+    $.fn.fullHeight = function () {
+        var self = this;
+        var windowHeight = window.innerHeight;
+        var fullHeightFunction = function () {
+            return self.css({
+                'height': windowHeight
+            });
+        }
+        windowElement.on('resize', function () {
+            windowHeight = window.innerHeight;
+            fullHeightFunction();
+        });
+        fullHeightFunction();
+        return self;
+    }
+    $('.home #header').fullHeight();
+}
+
+function scrollToElementId(elementId) {
+    var element = document.getElementById(elementId);
+    if (!element) {
+        console.warn('element was not found', elementId);
+        return false;
+    }
+
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    setTimeout(function () {
+        window.scrollBy(0, -30);
+    }, 500);
+
+    return true;
+}
